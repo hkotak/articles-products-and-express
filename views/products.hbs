@@ -1,0 +1,10 @@
+<h1>Products:</h1>
+{{#each items}}
+<div>
+  <a href="/products/{{id}}">{{name}}</a>
+</div>
+<br>
+{{/each}}
+<br>
+<a href="/products/new">New Item</a>
+<br>{{> footer}}

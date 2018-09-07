@@ -1,0 +1,18 @@
+version: '3'
+services:
+  my-app:
+    image: hkotak93/articles:${IMAGE_VERSION}-local
+    command: ["./node_modules/.bin/nodemon", "server.js"]
+    container_name: my-app
+    volumes:
+      - ".:/app/:rw"
+    env_file: .env
+    environment:
+      NODE_ENV: development
+    ports:
+      - "5000:${PORT}"
+    networks:
+      - my-app-network
+
+networks:
+  my-app-network:

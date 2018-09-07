@@ -1,0 +1,18 @@
+<h1>{{ name }} </h1>
+<br> Item ID#: {{ id }}
+<br> Price: ${{ price }}
+<br> Inventory Qty: {{ inventory }}
+<br>
+<br>
+
+<a href="/products/{{id}}/edit">Edit Product</a>
+
+<br>
+<br>
+
+<form method='post' action="/products/{{ id }}?_method=DELETE">
+  <button type='submit'>Delete Product</button>
+</form>
+
+
+<br> <a href="/products">Back</a>
