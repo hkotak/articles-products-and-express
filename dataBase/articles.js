@@ -1,5 +1,6 @@
 class Articles {
   constructor() {
+    this.knex = require('../knex/knex.js')
     this._count = 1;
     this._storage = [];
     this.add({
@@ -10,7 +11,7 @@ class Articles {
     });
   }
   all() {
-    return [...this._storage];
+    return this.knex.raw('SELECT * FROM items')
   }
   getItemById(id) {
     return this._storage.filter(item => id == item.id)[0];
