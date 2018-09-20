@@ -1,7 +1,19 @@
 //~~~~~~~~~~~~~~ PRODUCTS ~~~~~~~~~~~~~~//
 
 const express = require('express');
+// const winston = require('winston');
 const Router = express.Router();
+
+// const logger = winston.createLogger({
+//   level: 'info',
+//   transports: [
+//     new winston.transports.Console()
+//   ]
+// })
+
+//this goes in one of the routes
+// logger.info('SQL QUERY SUCCESSFUL');
+
 
 //Gets add() from .js
 const Products = require('../dataBase/products.js');

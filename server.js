@@ -5,14 +5,17 @@ const exphbs = require('express-handlebars');
 const methodOverride = require('method-override')
 const Products = require('./routes/products.js');
 const Articles = require('./routes/articles.js');
+const morgan = require('morgan');
 
 const knex = require('./knex/knex.js')
+
 
 
 //MIDDLEWARE
 app.use(express.static('public'));
 app.use(bp.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.use(morgan('dev'));
 
 app.engine('.hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
 app.set('view engine', '.hbs');
