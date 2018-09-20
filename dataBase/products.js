@@ -10,7 +10,7 @@ class Products {
     });
   }
   all() {
-    return this.knex.raw('SELECT * FROM items')
+    return this.knex.raw('SELECT * FROM products')
   }
   getItemById(id) {
     return this._storage.filter(item => id == item.id)[0];
@@ -36,5 +36,7 @@ class Products {
     return removedProduct;
   }
 }
+
+
 
 module.exports = Products;

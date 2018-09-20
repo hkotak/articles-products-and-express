@@ -11,7 +11,7 @@ class Articles {
     });
   }
   all() {
-    return this.knex.raw('SELECT * FROM items')
+    return this.knex.raw('SELECT * FROM articles')
   }
   getItemById(id) {
     return this._storage.filter(item => id == item.id)[0];
