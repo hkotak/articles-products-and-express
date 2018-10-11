@@ -1,0 +1,58 @@
+{{!-- WHATTTTT THHHHEHEEEE FFFFFF ISSSS WITH --}}
+{{#with product}}
+<form action="/products/{{ id }}?_method=PUT" method="post">
+  <h3>
+    <label>Edit Product</label>
+  </h3>
+  <label>Name:
+    <input type='text' name='name' id=''>
+  </label>
+  <br><br>
+  <label>Price:
+    <input type='number' name='price' id=''>
+  </label>
+  <br><br>
+  <label>Inventory:
+    <input type='number' name='inventory' id=''>
+  </label>
+  <br><br>
+  <label>
+    <input type="submit" value='Submit'>
+  </label>
+  <br><br>
+  <a href="/products/{{ id }}/">Back</a>
+  {{/with}}
+
+
+  {{!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --}}
+
+  {{#with article}}
+  <form action="/articles/{{ id }}?_method=PUT" method="post">
+    <h3>
+      <label>Edit Article</label>
+    </h3>
+    <label>Title:
+      <input type='text' name='title' id=''>
+    </label>
+    <br><br>
+    <label>Body:
+      <input type='text' name='body' id=''>
+    </label>
+    <br><br>
+    <label>Author:
+      <input type='text' name='author' id=''>
+    </label>
+    <br><br>
+    <label>
+      <input type="submit" value='Submit'>
+    </label>
+    <br><br>
+    <a href="/products/ {{ id }}/">Back</a>
+    {{/with}}
+
+
+
+
+
+
+  </form>
